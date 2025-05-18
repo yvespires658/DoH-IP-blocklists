@@ -35,22 +35,12 @@ add name="Update-DoH-Lists" source={
     
     # Remove existing address list entries with previous and new names
     :log info "Clearing existing IPv4 DoH address lists"
-    /ip firewall address-list remove [/ip firewall address-list find list="DoHServers"]
+    /ip firewall address-list remove [/ip firewall address-list find list="DoHServersIPv4"]
     /ip firewall address-list remove [/ip firewall address-list find list=$ipv4ListName]
     
     :log info "Clearing existing IPv6 DoH address lists"
-    /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="DoHServers"]
+    /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="DoHServersIPv6"]
     /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=$ipv6ListName]
-    
-    # Modify the downloaded scripts to use our list names
-    :local ipv4Content [/file get [/file find name=$ipv4File] contents]
-    :local ipv6Content [/file get [/file find name=$ipv6File] contents]
-    
-    :local modifiedIpv4Content [:put [/terminal(:local s $ipv4Content; :return [:substitute $s "list=DoHServers" "list=$ipv4ListName" -1])]]
-    :local modifiedIpv6Content [:put [/terminal(:local s $ipv6Content; :return [:substitute $s "list=DoHServers" "list=$ipv6ListName" -1])]]
-    
-    /file set [/file find name=$ipv4File] contents=$modifiedIpv4Content
-    /file set [/file find name=$ipv6File] contents=$modifiedIpv6Content
     
     # Import the scripts directly
     :log info "Importing IPv4 DoH addresses"
