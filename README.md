@@ -13,7 +13,7 @@ These lists are processed versions of DoH-IP-blocklists maintained by dibdot:
 https://github.com/dibdot/DoH-IP-blocklists
 
 ## Last Updated
-Sat 17 May 2025 09:24:12 PM -03
+Sat 17 May 2025 09:28:39 PM -03
 
 ## IPv4 List Stats
 - Total IPs: 2534
