@@ -13,7 +13,7 @@ These lists are processed versions of DoH-IP-blocklists maintained by dibdot:
 https://github.com/dibdot/DoH-IP-blocklists
 
 ## Last Updated
-Sat 17 May 2025 08:51:54 PM -03
+Sat 17 May 2025 09:06:07 PM -03
 
 ## IPv4 List Stats
 - Total IPs: 2534
@@ -22,12 +22,4 @@ Sat 17 May 2025 08:51:54 PM -03
 - Total IPs: 1853
 
 ## Usage with Mikrotik
-You can use these lists in two ways:
-
-1. **Direct Import Method:**
-   - Download the appropriate .rsc file
-   - In Winbox: Files ? Upload ? select the downloaded .rsc file
-   - In Terminal: /import file-name=mikrotik-doh-ipv4.rsc
-
-2. **Script Method:**
    See the included `mikrotik-doh-blocker.rsc` script for automatic implementation.
