@@ -13,13 +13,13 @@ These lists are processed versions of DoH-IP-blocklists maintained by dibdot:
 https://github.com/dibdot/DoH-IP-blocklists
 
 ## Last Updated
-Sat 17 May 2025 09:28:39 PM -03
+Fri 06 Jun 2025 05:42:29 PM -03
 
 ## IPv4 List Stats
-- Total IPs: 2534
+- Total IPs: 2536
 
 ## IPv6 List Stats
-- Total IPs: 1853
+- Total IPs: 1856
 
 ## Usage with Mikrotik
    See the included `mikrotik-doh-blocker.rsc` script for automatic implementation.
